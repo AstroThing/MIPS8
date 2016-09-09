@@ -36,115 +36,115 @@ module ControlUnit(
 		JL = 5'd16,
 		JUMP = 5'd17;
 
-always @ (opcode)
-begin
-  reg_write = 0;
-  is_move = 0;
-  is_mem_access = 0;
-  is_imm = 0;
-  alu_func = 3'd0;
-  flags_write = 0;
-  dm_write = 0;
-  is_jz = 0;
-  is_jnz = 0;
-  is_jl = 0;
-  is_jg = 0;
-  is_jump = 0;
+	always @ (opcode)
+	begin
+	  reg_write = 0;
+	  is_move = 0;
+	  is_mem_access = 0;
+	  is_imm = 0;
+	  alu_func = 3'd0;
+	  flags_write = 0;
+	  dm_write = 0;
+	  is_jz = 0;
+	  is_jnz = 0;
+	  is_jl = 0;
+	  is_jg = 0;
+	  is_jump = 0;
 
-  case(opcode)
-	 ADD:
-	 begin
-		reg_write = 1;
-      flags_write = 1;
-		alu_func = 3'd1;
-	 end
-	 
-	 SUB:
-	 begin
-		reg_write = 1;
-      flags_write = 1;
-		alu_func = 3'd2;
-	 end
-	 
-	 OR:
-	 begin
-		reg_write = 1;
-      flags_write = 1;
-		alu_func = 3'd3;
-	 end
-	 
-	 AND:
-	 begin
-		reg_write = 1;
-      flags_write = 1;
-		alu_func = 3'd4;
-	 end
-	 
-	 XOR:
-	 begin
-		reg_write = 1;
-      flags_write = 1;
-		alu_func = 3'd5;
-	 end
+	  case(opcode)
+		 ADD:
+		 begin
+			reg_write = 1;
+			flags_write = 1;
+			alu_func = 3'd1;
+		 end
+		 
+		 SUB:
+		 begin
+			reg_write = 1;
+			flags_write = 1;
+			alu_func = 3'd2;
+		 end
+		 
+		 OR:
+		 begin
+			reg_write = 1;
+			flags_write = 1;
+			alu_func = 3'd3;
+		 end
+		 
+		 AND:
+		 begin
+			reg_write = 1;
+			flags_write = 1;
+			alu_func = 3'd4;
+		 end
+		 
+		 XOR:
+		 begin
+			reg_write = 1;
+			flags_write = 1;
+			alu_func = 3'd5;
+		 end
 
-    MOV:
-    begin
-      reg_write = 1;
-      is_move = 1;
-    end
+		 MOV:
+		 begin
+			reg_write = 1;
+			is_move = 1;
+		 end
 
-    LW:
-    begin
-      reg_write = 1;
-      is_mem_access = 1;
-    end
-	 
-	 SW:
-		dm_write = 1;
+		 LW:
+		 begin
+			reg_write = 1;
+			is_mem_access = 1;
+		 end
+		 
+		 SW:
+			dm_write = 1;
 
-    LI:
-    begin
-      reg_write = 1;
-      is_imm = 1;
-    end
+		 LI:
+		 begin
+			reg_write = 1;
+			is_imm = 1;
+		 end
 
-    ADDI:
-    begin
-      reg_write = 1;
-      is_imm = 1;
-      flags_write = 1;
-		alu_func = 3'd1;
-    end
-		
-    SUBI:
-    begin
-      reg_write = 1;
-      is_imm = 1;
-      flags_write = 1;
-		alu_func = 3'd2;
-    end
-	 
-	 CMP:
-    begin
-      reg_write = 1;
-      flags_write = 1;
-    end
-		
-    JZ:
-      is_jz = 1;
-		
-    JNZ:
-      is_jnz = 1;
-		
-    JG:
-      is_jg = 1;
-		
-    JL:
-      is_jl = 1;
-		
-    JUMP:
-      is_jump = 1;
-  endcase
-  end
+		 ADDI:
+		 begin
+			reg_write = 1;
+			is_imm = 1;
+			flags_write = 1;
+			alu_func = 3'd1;
+		 end
+			
+		 SUBI:
+		 begin
+			reg_write = 1;
+			is_imm = 1;
+			flags_write = 1;
+			alu_func = 3'd2;
+		 end
+		 
+		 CMP:
+		 begin
+			reg_write = 1;
+			flags_write = 1;
+		 end
+			
+		 JZ:
+			is_jz = 1;
+			
+		 JNZ:
+			is_jnz = 1;
+			
+		 JG:
+			is_jg = 1;
+			
+		 JL:
+			is_jl = 1;
+			
+		 JUMP:
+			is_jump = 1;
+	  endcase
+	  end
 
 endmodule

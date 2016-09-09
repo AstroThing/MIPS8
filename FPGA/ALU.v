@@ -1,11 +1,11 @@
 `timescale 1ns / 1ps
 
 module ALU(
-		input [7:0] op1,
-		input [7:0] op2,
-		input [2:0] func,
-		output reg [7:0] result
-    );
+	input [7:0] op1,
+	input [7:0] op2,
+	input [2:0] func,
+	output reg [7:0] result
+	);
 
 	parameter ADD = 3'h0;
 	parameter SUB = 3'h1;

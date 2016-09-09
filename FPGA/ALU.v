@@ -4,7 +4,10 @@ module ALU(
 	input [7:0] op1,
 	input [7:0] op2,
 	input [2:0] func,
-	output reg [7:0] result
+	output reg [7:0] result,
+	output reg zero,
+	output reg sign,
+	output reg ovf
 	);
 
 	parameter ADD = 3'h0;
@@ -23,6 +26,16 @@ module ALU(
 			XOR: result = op1 ^ op2;
 			default: result = 8'h0;
 		endcase
+		
+		zero = !(|result);
+		sign = result >> 7;
+		
+		if(func == ADD)
+			ovf = (op1 >= 0 && op2 >= 0 && result < 0) || (op1 < 0 && op2 < 0 && result >= 0);
+		else if(func == SUB)
+			ovf = (op1 >= 0 && op2 < 0 && result < 0) || (op1 < 0 && op2 >= 0 && result >= 0);
+		else
+			ovf = 0;
 	end
 	
 endmodule

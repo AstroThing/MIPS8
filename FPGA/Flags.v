@@ -15,7 +15,7 @@ module Flags(
 	 assign sf = flags[1];
 	 assign of = flags[2];
 	 
-	 always @ (flags_write)
+	 always @ (flags_write or zero or sign or ovf)
 		if(flags_write)
 		begin
 			flags[0] = zero;

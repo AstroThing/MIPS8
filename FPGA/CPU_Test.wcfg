@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/nimer/Documents/GitHub/MIPS8/FPGA/CPU_Test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="CPU_Test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/CPU_Test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/instr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instr[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/CU/opcode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opcode[4:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/ALU/op1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">op1[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/op2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">op2[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/ALU/func" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">func[2:0]</obj_property>
+      <obj_property name="ObjectShortName">func[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/ALU/result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/flags/flags" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">flags[2:0]</obj_property>
+      <obj_property name="ObjectShortName">flags[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/ALU/zero" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CPU_Test/uut/RF/registers" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">registers[0:3,7:0]</obj_property>
+      <obj_property name="ObjectShortName">registers[0:3,7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

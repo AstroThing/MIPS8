@@ -5,6 +5,7 @@ module ControlUnit(
 	output reg reg_write,
 	output reg is_move,
 	output reg is_mem_access,
+	output reg is_li,
 	output reg is_imm,
 	output reg [2:0] alu_func,
 	output reg flags_write,
@@ -41,6 +42,7 @@ module ControlUnit(
 	  reg_write = 0;
 	  is_move = 0;
 	  is_mem_access = 0;
+	  is_li = 0;
 	  is_imm = 0;
 	  alu_func = 3'd0;
 	  flags_write = 0;
@@ -70,14 +72,14 @@ module ControlUnit(
 		 begin
 			reg_write = 1;
 			flags_write = 1;
-			alu_func = 3'd3;
+			alu_func = 3'd4;
 		 end
 		 
 		 AND:
 		 begin
 			reg_write = 1;
 			flags_write = 1;
-			alu_func = 3'd4;
+			alu_func = 3'd3;
 		 end
 		 
 		 XOR:
@@ -105,7 +107,7 @@ module ControlUnit(
 		 LI:
 		 begin
 			reg_write = 1;
-			is_imm = 1;
+			is_li = 1;
 		 end
 
 		 ADDI:
@@ -126,8 +128,8 @@ module ControlUnit(
 		 
 		 CMP:
 		 begin
-			reg_write = 1;
 			flags_write = 1;
+			alu_func = 3'd2;
 		 end
 			
 		 JZ:

@@ -10,11 +10,11 @@ module ALU(
 	output reg ovf
 	);
 
-	parameter ADD = 3'h0;
-	parameter SUB = 3'h1;
-	parameter AND = 3'h2;
-	parameter OR = 3'h3;
-	parameter XOR = 3'h4;
+	parameter ADD = 3'd1;
+	parameter SUB = 3'd2;
+	parameter AND = 3'd3;
+	parameter OR = 3'd4;
+	parameter XOR = 3'd5;
 	
 	always @ (op1 or op2 or func)
 	begin

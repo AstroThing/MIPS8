@@ -12,8 +12,10 @@ wire [15:0] instr;
 //RegisterFile wires
 wire [7:0] read_data1;
 wire [7:0] read_data2;
+wire [7:0] write_data;
 
 //ALU wires
+wire [7:0] op2;
 wire [7:0] result;
 wire zero;
 wire sign;
@@ -21,7 +23,6 @@ wire ovf;
 
 //DataMemory wires
 wire [7:0] dm_read_data;
-wire [7:0] write_data;
 
 //ControlUnit wires
 wire reg_write;
@@ -46,7 +47,11 @@ Flags flags(flags_write, zero, sign, ovf, zf, sf, of);
 ControlUnit CU(instr[15:11], reg_write, is_move, is_mem_access, is_imm, alu_func, flags_write, dm_write, is_jz, is_jnz, is_jl, is_jg, is_jump);
 InstructionMemory IM(PC, instr);
 RegisterFile RF(clk, reg_write, instr[10:9], instr[8:7], instr[10:9], write_data, read_data1, read_data2);
-ALU ALU(read_data1, read_data2, alu_func, result, zero, sign, ovf);
+ALU ALU(read_data1, op2, alu_func, result, zero, sign, ovf);
 DataMemory DM(clk, dm_write, read_data2, read_data1, dm_read_data);
+
+//Logic
+assign write_data = is_mem_access ? dm_read_data : (is_move ? read_data2 : result);
+assign op2 = is_imm ? instr[8:1] : read_data2;
 
 endmodule

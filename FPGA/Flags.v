@@ -16,11 +16,14 @@ module Flags(
 	 assign of = flags[2];
 	 
 	 always @ (flags_write or zero or sign or ovf)
+	 begin
+		flags = 3'b000;
 		if(flags_write)
 		begin
 			flags[0] = zero;
 			flags[1] = sign;
 			flags[2] = ovf;
 		end
+	end
 
 endmodule

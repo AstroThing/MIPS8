@@ -2,27 +2,27 @@ Command line:
    CPU_Test_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49239
+     -socket  49371
 
-Sat Sep 10 23:00:28 2016
+Sun Sep 11 20:10:10 2016
 
 
- Elaboration Time: 0.140401 sec
+ Elaboration Time: 0.093601 sec
 
- Current Memory Usage: 694.89 Meg
+ Current Memory Usage: 694.825 Meg
 
- Total Signals          : 70
- Total Nets             : 112
- Total Signal Drivers   : 38
- Total Blocks           : 9
- Total Primitive Blocks : 7
- Total Processes        : 48
- Total Traceable Variables  : 65
- Total Scalar Nets and Variables : 519
+ Total Signals          : 79
+ Total Nets             : 131
+ Total Signal Drivers   : 42
+ Total Blocks           : 10
+ Total Primitive Blocks : 8
+ Total Processes        : 54
+ Total Traceable Variables  : 67
+ Total Scalar Nets and Variables : 540
 
- Total Simulation Time: 0.280802 sec
+ Total Simulation Time: 0.140401 sec
 
- Current Memory Usage: 1009.46 Meg
+ Current Memory Usage: 1009.4 Meg
 
-Sat Sep 10 23:01:37 2016
+Sun Sep 11 20:11:34 2016
 

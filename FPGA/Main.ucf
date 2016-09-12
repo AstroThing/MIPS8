@@ -1,0 +1,25 @@
+Net "clk" LOC="B8";
+
+Net "clk" IOSTANDARD = LVCMOS33;
+
+## System level constraints
+Net "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD "sys_clk_pin" 20000 ps;
+
+Net "start" LOC="C13" | IOSTANDARD = LVCMOS33;
+
+Net "is_dm_access" LOC="B16" | IOSTANDARD = LVCMOS33;
+
+Net "read_addr[0]" LOC="J11" | IOSTANDARD = LVCMOS33;
+Net "read_addr[1]" LOC="J12" | IOSTANDARD = LVCMOS33;
+Net "read_addr[2]" LOC="H16" | IOSTANDARD = LVCMOS33;
+Net "read_addr[3]" LOC="H13" | IOSTANDARD = LVCMOS33;
+
+Net "read_data[0]" LOC="C11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "read_data[1]" LOC="D11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "read_data[2]" LOC="B11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "read_data[3]" LOC="A12" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "read_data[4]" LOC="A13" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "read_data[5]" LOC="B13" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "read_data[6]" LOC="A14" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+Net "read_data[7]" LOC="B14" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;

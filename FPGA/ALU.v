@@ -16,7 +16,7 @@ module ALU(
 	parameter OR = 3'd4;
 	parameter XOR = 3'd5;
 	
-	always @ (op1 or op2 or func)
+	always @ (op1 or op2 or func or result)
 	begin
 		case(func)
 			ADD: result = op1 + op2;

@@ -17,7 +17,7 @@ module Flags(
 	 
 	 always @ (flags_write or zero or sign or ovf)
 	 begin
-		flags = 3'b000;
+		flags = flags;
 		if(flags_write)
 		begin
 			flags[0] = zero;

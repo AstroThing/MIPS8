@@ -149,4 +149,51 @@ module ControlUnit(
 	  endcase
 	  end
 
+
+ // This code allows you to see opcode names in simulation
+  `ifndef SYNTHESIS
+  reg [32:0] opname;
+  always @* begin
+    case (opcode)
+      NOP:
+        opname = "nop";
+      ADD:
+        opname = "add";
+      SUB:
+        opname = "sub";
+      OR:
+        opname = "or";
+      AND:
+        opname = "and";
+      XOR:
+        opname = "xor";
+      MOV:
+        opname = "mov";
+      LW:
+        opname = "lw";
+      SW:
+        opname = "sw";
+      LI:
+        opname = "li";
+		ADDI:
+			opname = "addi";
+		SUBI:
+			opname = "subi";
+		CMP:
+			opname = "cmp";
+		JZ:
+			opname = "jz";
+		JNZ:
+			opname = "jnz";
+		JG:
+			opname = "jg";
+		JL:
+			opname = "jl";
+		JUMP:
+			opname = "jmp";
+      default:
+        opname = "XXXXXXXXXXXXXXXXX";
+    endcase
+  end
+  `endif
 endmodule

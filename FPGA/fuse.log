@@ -14,9 +14,10 @@ Analyzing Verilog file "C:/Users/nimer/Documents/GitHub/MIPS8/FPGA/CPU.v" into l
 Analyzing Verilog file "C:/Users/nimer/Documents/GitHub/MIPS8/FPGA/CPU_Test.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:1016 - "C:/Users/nimer/Documents/GitHub/MIPS8/FPGA/CPU_Test.v" Line 13: Port debug_rf_addr is not connected to this instance
 Completed static elaboration
-Fuse Memory Usage: 102444 KB
-Fuse CPU Usage: 217 ms
+Fuse Memory Usage: 102700 KB
+Fuse CPU Usage: 249 ms
 Compiling module ControlUnit
 Compiling module InstructionMemory
 Compiling module RegisterFile
@@ -30,5 +31,5 @@ Compiling module glbl
 Time Resolution for simulation is 1ps.
 Compiled 10 Verilog Units
 Built simulation executable C:/Users/nimer/Documents/GitHub/MIPS8/FPGA/CPU_Test_isim_beh.exe
-Fuse Memory Usage: 106008 KB
-Fuse CPU Usage: 233 ms
+Fuse Memory Usage: 106264 KB
+Fuse CPU Usage: 265 ms

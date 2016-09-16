@@ -6,6 +6,7 @@ module Main(
 	 input is_dm_access,
 	 input [3:0] read_addr,
 	 output stopped,
+	 output stopped_led,
 	 output reg [7:0] read_data
     );
 	
@@ -14,7 +15,12 @@ module Main(
 	wire [7:0] debug_rf_data;
 	wire [7:0] debug_dm_data;
 	
-	CPU cpu(clk, debug_rf_addr, debug_dm_addr, start, stopped, debug_rf_data, debug_dm_data);
+	wire stopped_wire;
+	
+	assign stopped = stopped_wire;
+	assign stopped_led = stopped_wire;
+	
+	CPU cpu(clk, debug_rf_addr, debug_dm_addr, start, stopped_wire, debug_rf_data, debug_dm_data);
 	
 	always @ (is_dm_access or read_addr or debug_dm_data or debug_rf_data)
 	begin

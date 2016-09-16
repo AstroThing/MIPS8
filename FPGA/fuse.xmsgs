@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/nimer/Documents/GitHub/MIPS8/FPGA/CPU_Test.v" Line 13: Port <arg fmt="%s" index="1">debug_rf_addr</arg> is not connected to this instance
+</msg>
+
 </messages>
 

@@ -42,6 +42,25 @@ static unsigned int ng17[] = {14U, 0U};
 static unsigned int ng18[] = {15U, 0U};
 static unsigned int ng19[] = {16U, 0U};
 static unsigned int ng20[] = {17U, 0U};
+static int ng21[] = {7237488, 0, 0, 0};
+static int ng22[] = {6382692, 0, 0, 0};
+static int ng23[] = {7566690, 0, 0, 0};
+static int ng24[] = {28530, 0, 0, 0};
+static int ng25[] = {6385252, 0, 0, 0};
+static int ng26[] = {7892850, 0, 0, 0};
+static int ng27[] = {7171958, 0, 0, 0};
+static int ng28[] = {27767, 0, 0, 0};
+static int ng29[] = {29559, 0, 0, 0};
+static int ng30[] = {27753, 0, 0, 0};
+static int ng31[] = {1633969257, 0, 0, 0};
+static int ng32[] = {1937072745, 0, 0, 0};
+static int ng33[] = {6516080, 0, 0, 0};
+static int ng34[] = {27258, 0, 0, 0};
+static int ng35[] = {6975098, 0, 0, 0};
+static int ng36[] = {27239, 0, 0, 0};
+static int ng37[] = {27244, 0, 0, 0};
+static int ng38[] = {6974832, 0, 0, 0};
+static int ng39[] = {1482184792, 0, 1482184792, 0, 1482184792, 0, 1482184792, 0, 88, 0};
 
 
 
@@ -54,7 +73,7 @@ static void Always_40_0(char *t0)
     char *t5;
     int t6;
 
-LAB0:    t1 = (t0 + 3896U);
+LAB0:    t1 = (t0 + 3988U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -62,9 +81,9 @@ LAB0:    t1 = (t0 + 3896U);
 LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(40, ng0);
-    t2 = (t0 + 4092);
+    t2 = (t0 + 4328);
     *((int *)t2) = 1;
-    t3 = (t0 + 3924);
+    t3 = (t0 + 4016);
     *((char **)t3) = t2;
     *((char **)t1) = &&LAB4;
 
@@ -421,10 +440,251 @@ LAB39:    xsi_set_current_line(148, ng0);
 
 }
 
-
-extern void work_m_00000000001313945617_1938225339_init()
+static void Always_156_1(char *t0)
 {
-	static char *pe[] = {(void *)Always_40_0};
-	xsi_register_didat("work_m_00000000001313945617_1938225339", "isim/CPU_Test_isim_beh.exe.sim/work/m_00000000001313945617_1938225339.didat");
+    char *t1;
+    char *t2;
+    char *t3;
+    char *t4;
+    char *t5;
+    int t6;
+    char *t7;
+    char *t8;
+
+LAB0:    t1 = (t0 + 4132U);
+    t2 = *((char **)t1);
+    if (t2 == 0)
+        goto LAB2;
+
+LAB3:    goto *t2;
+
+LAB2:    xsi_set_current_line(156, ng0);
+    t2 = (t0 + 4336);
+    *((int *)t2) = 1;
+    t3 = (t0 + 4160);
+    *((char **)t3) = t2;
+    *((char **)t1) = &&LAB4;
+
+LAB1:    return;
+LAB4:    xsi_set_current_line(156, ng0);
+
+LAB5:    xsi_set_current_line(157, ng0);
+    t4 = (t0 + 2040U);
+    t5 = *((char **)t4);
+
+LAB6:    t4 = ((char*)((ng2)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t4, 5);
+    if (t6 == 1)
+        goto LAB7;
+
+LAB8:    t2 = ((char*)((ng3)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB9;
+
+LAB10:    t2 = ((char*)((ng5)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB11;
+
+LAB12:    t2 = ((char*)((ng6)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB13;
+
+LAB14:    t2 = ((char*)((ng7)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB15;
+
+LAB16:    t2 = ((char*)((ng8)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB17;
+
+LAB18:    t2 = ((char*)((ng9)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB19;
+
+LAB20:    t2 = ((char*)((ng10)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB21;
+
+LAB22:    t2 = ((char*)((ng11)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB23;
+
+LAB24:    t2 = ((char*)((ng12)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB25;
+
+LAB26:    t2 = ((char*)((ng13)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB27;
+
+LAB28:    t2 = ((char*)((ng14)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB29;
+
+LAB30:    t2 = ((char*)((ng15)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB31;
+
+LAB32:    t2 = ((char*)((ng16)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB33;
+
+LAB34:    t2 = ((char*)((ng17)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB35;
+
+LAB36:    t2 = ((char*)((ng18)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB37;
+
+LAB38:    t2 = ((char*)((ng19)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB39;
+
+LAB40:    t2 = ((char*)((ng20)));
+    t6 = xsi_vlog_unsigned_case_compare(t5, 5, t2, 5);
+    if (t6 == 1)
+        goto LAB41;
+
+LAB42:
+LAB44:
+LAB43:    xsi_set_current_line(195, ng0);
+    t2 = ((char*)((ng39)));
+    t3 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t3, t2, 0, 0, 33);
+
+LAB45:    goto LAB2;
+
+LAB7:    xsi_set_current_line(159, ng0);
+    t7 = ((char*)((ng21)));
+    t8 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t8, t7, 0, 0, 33);
+    goto LAB45;
+
+LAB9:    xsi_set_current_line(161, ng0);
+    t3 = ((char*)((ng22)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB11:    xsi_set_current_line(163, ng0);
+    t3 = ((char*)((ng23)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB13:    xsi_set_current_line(165, ng0);
+    t3 = ((char*)((ng24)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB15:    xsi_set_current_line(167, ng0);
+    t3 = ((char*)((ng25)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB17:    xsi_set_current_line(169, ng0);
+    t3 = ((char*)((ng26)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB19:    xsi_set_current_line(171, ng0);
+    t3 = ((char*)((ng27)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB21:    xsi_set_current_line(173, ng0);
+    t3 = ((char*)((ng28)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB23:    xsi_set_current_line(175, ng0);
+    t3 = ((char*)((ng29)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB25:    xsi_set_current_line(177, ng0);
+    t3 = ((char*)((ng30)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB27:    xsi_set_current_line(179, ng0);
+    t3 = ((char*)((ng31)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB29:    xsi_set_current_line(181, ng0);
+    t3 = ((char*)((ng32)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB31:    xsi_set_current_line(183, ng0);
+    t3 = ((char*)((ng33)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB33:    xsi_set_current_line(185, ng0);
+    t3 = ((char*)((ng34)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB35:    xsi_set_current_line(187, ng0);
+    t3 = ((char*)((ng35)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB37:    xsi_set_current_line(189, ng0);
+    t3 = ((char*)((ng36)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB39:    xsi_set_current_line(191, ng0);
+    t3 = ((char*)((ng37)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+LAB41:    xsi_set_current_line(193, ng0);
+    t3 = ((char*)((ng38)));
+    t4 = (t0 + 3464);
+    xsi_vlogvar_assign_value(t4, t3, 0, 0, 33);
+    goto LAB45;
+
+}
+
+
+extern void work_m_00000000002939982037_1938225339_init()
+{
+	static char *pe[] = {(void *)Always_40_0,(void *)Always_156_1};
+	xsi_register_didat("work_m_00000000002939982037_1938225339", "isim/CPU_Test_isim_beh.exe.sim/work/m_00000000002939982037_1938225339.didat");
 	xsi_register_executes(pe);
 }

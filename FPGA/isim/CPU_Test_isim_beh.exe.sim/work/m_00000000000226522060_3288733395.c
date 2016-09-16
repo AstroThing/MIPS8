@@ -267,20 +267,18 @@ static void Always_18_3(char *t0)
     char *t3;
     char *t4;
     char *t5;
-    unsigned int t6;
-    unsigned int t7;
+    char *t6;
+    char *t7;
     unsigned int t8;
     unsigned int t9;
     unsigned int t10;
-    char *t11;
-    char *t12;
+    unsigned int t11;
+    unsigned int t12;
     char *t14;
     char *t15;
     char *t16;
-    char *t17;
-    char *t18;
-    unsigned int t19;
-    int t20;
+    unsigned int t17;
+    int t18;
 
 LAB0:    t1 = (t0 + 2336U);
     t2 = *((char **)t1);
@@ -298,77 +296,85 @@ LAB2:    xsi_set_current_line(18, ng0);
 
 LAB1:    return;
 LAB4:    xsi_set_current_line(19, ng0);
-    t4 = (t0 + 600U);
-    t5 = *((char **)t4);
-    t4 = (t5 + 4);
-    t6 = *((unsigned int *)t4);
-    t7 = (~(t6));
-    t8 = *((unsigned int *)t5);
-    t9 = (t8 & t7);
-    t10 = (t9 != 0);
-    if (t10 > 0)
-        goto LAB5;
-
-LAB6:
-LAB7:    goto LAB2;
 
 LAB5:    xsi_set_current_line(20, ng0);
+    t4 = (t0 + 1380);
+    t5 = (t4 + 36U);
+    t6 = *((char **)t5);
+    t7 = (t0 + 1380);
+    xsi_vlogvar_assign_value(t7, t6, 0, 0, 3);
+    xsi_set_current_line(21, ng0);
+    t2 = (t0 + 600U);
+    t3 = *((char **)t2);
+    t2 = (t3 + 4);
+    t8 = *((unsigned int *)t2);
+    t9 = (~(t8));
+    t10 = *((unsigned int *)t3);
+    t11 = (t10 & t9);
+    t12 = (t11 != 0);
+    if (t12 > 0)
+        goto LAB6;
 
-LAB8:    xsi_set_current_line(21, ng0);
-    t11 = (t0 + 692U);
-    t12 = *((char **)t11);
-    t11 = (t0 + 1380);
-    t14 = (t0 + 1380);
-    t15 = (t14 + 44U);
-    t16 = *((char **)t15);
-    t17 = ((char*)((ng1)));
-    xsi_vlog_generic_convert_bit_index(t13, t16, 2, t17, 32, 1);
-    t18 = (t13 + 4);
-    t19 = *((unsigned int *)t18);
-    t20 = (!(t19));
-    if (t20 == 1)
-        goto LAB9;
+LAB7:
+LAB8:    goto LAB2;
 
-LAB10:    xsi_set_current_line(22, ng0);
+LAB6:    xsi_set_current_line(22, ng0);
+
+LAB9:    xsi_set_current_line(23, ng0);
+    t4 = (t0 + 692U);
+    t5 = *((char **)t4);
+    t4 = (t0 + 1380);
+    t6 = (t0 + 1380);
+    t7 = (t6 + 44U);
+    t14 = *((char **)t7);
+    t15 = ((char*)((ng1)));
+    xsi_vlog_generic_convert_bit_index(t13, t14, 2, t15, 32, 1);
+    t16 = (t13 + 4);
+    t17 = *((unsigned int *)t16);
+    t18 = (!(t17));
+    if (t18 == 1)
+        goto LAB10;
+
+LAB11:    xsi_set_current_line(24, ng0);
     t2 = (t0 + 784U);
     t3 = *((char **)t2);
     t2 = (t0 + 1380);
     t4 = (t0 + 1380);
     t5 = (t4 + 44U);
-    t11 = *((char **)t5);
-    t12 = ((char*)((ng2)));
-    xsi_vlog_generic_convert_bit_index(t13, t11, 2, t12, 32, 1);
+    t6 = *((char **)t5);
+    t7 = ((char*)((ng2)));
+    xsi_vlog_generic_convert_bit_index(t13, t6, 2, t7, 32, 1);
     t14 = (t13 + 4);
-    t6 = *((unsigned int *)t14);
-    t20 = (!(t6));
-    if (t20 == 1)
-        goto LAB11;
+    t8 = *((unsigned int *)t14);
+    t18 = (!(t8));
+    if (t18 == 1)
+        goto LAB12;
 
-LAB12:    xsi_set_current_line(23, ng0);
+LAB13:    xsi_set_current_line(25, ng0);
     t2 = (t0 + 876U);
     t3 = *((char **)t2);
     t2 = (t0 + 1380);
     t4 = (t0 + 1380);
     t5 = (t4 + 44U);
-    t11 = *((char **)t5);
-    t12 = ((char*)((ng3)));
-    xsi_vlog_generic_convert_bit_index(t13, t11, 2, t12, 32, 1);
+    t6 = *((char **)t5);
+    t7 = ((char*)((ng3)));
+    xsi_vlog_generic_convert_bit_index(t13, t6, 2, t7, 32, 1);
     t14 = (t13 + 4);
-    t6 = *((unsigned int *)t14);
-    t20 = (!(t6));
-    if (t20 == 1)
-        goto LAB13;
+    t8 = *((unsigned int *)t14);
+    t18 = (!(t8));
+    if (t18 == 1)
+        goto LAB14;
 
-LAB14:    goto LAB7;
+LAB15:    goto LAB8;
 
-LAB9:    xsi_vlogvar_assign_value(t11, t12, 0, *((unsigned int *)t13), 1);
-    goto LAB10;
+LAB10:    xsi_vlogvar_assign_value(t4, t5, 0, *((unsigned int *)t13), 1);
+    goto LAB11;
 
-LAB11:    xsi_vlogvar_assign_value(t2, t3, 0, *((unsigned int *)t13), 1);
-    goto LAB12;
+LAB12:    xsi_vlogvar_assign_value(t2, t3, 0, *((unsigned int *)t13), 1);
+    goto LAB13;
 
-LAB13:    xsi_vlogvar_assign_value(t2, t3, 0, *((unsigned int *)t13), 1);
-    goto LAB14;
+LAB14:    xsi_vlogvar_assign_value(t2, t3, 0, *((unsigned int *)t13), 1);
+    goto LAB15;
 
 }
 

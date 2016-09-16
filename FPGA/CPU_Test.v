@@ -23,24 +23,11 @@ module CPU_Test;
 
 		// Wait 100 ns for global reset to finish
 		#100;
+		start = 1;
+		#100;
+		start = 0;
         
 		// Add stimulus here
-		start = 1;
-		#300
-		start = 0;
-		#900
-		start = 1;
-		#100
-		start = 0;
-		/*
-		start = 1;
-		#400
-		start = 0;
-		#400
-		start = 1;
-		#600
-		start = 0;
-		*/
 	end
 	
 	always

@@ -6,20 +6,30 @@ Net "clk" IOSTANDARD = LVCMOS33;
 Net "clk" TNM_NET = sys_clk_pin;
 TIMESPEC TS_sys_clk_pin = PERIOD "sys_clk_pin" 20000 ps;
 
-Net "start" LOC="C13" | IOSTANDARD = LVCMOS33;
+Net "stopped_led" LOC="C11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
 
-Net "is_dm_access" LOC="B16" | IOSTANDARD = LVCMOS33;
+#J2
+	#From IO1 to IO10
+	Net "read_addr[3]" LOC ="H14" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_addr[2]" LOC ="J13" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_addr[1]" LOC ="K13" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_addr[0]" LOC ="H11" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
 
-Net "read_addr[0]" LOC="J11" | IOSTANDARD = LVCMOS33;
-Net "read_addr[1]" LOC="J12" | IOSTANDARD = LVCMOS33;
-Net "read_addr[2]" LOC="H16" | IOSTANDARD = LVCMOS33;
-Net "read_addr[3]" LOC="H13" | IOSTANDARD = LVCMOS33;
+#J3
+	#From IO1 to IO10
+	Net "read_data[0]" LOC ="D15" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_data[1]" LOC ="G16" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_data[2]" LOC ="J16" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_data[3]" LOC ="K15" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_data[4]" LOC ="C16" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_data[5]" LOC ="G15" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_data[6]" LOC ="H15" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	Net "read_data[7]" LOC ="K16" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
 
-Net "read_data[0]" LOC="C11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-Net "read_data[1]" LOC="D11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-Net "read_data[2]" LOC="B11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-Net "read_data[3]" LOC="A12" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-Net "read_data[4]" LOC="A13" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-Net "read_data[5]" LOC="B13" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-Net "read_data[6]" LOC="A14" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
-Net "read_data[7]" LOC="B14" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8;
+#J5
+	#IO1
+	Net "stopped" LOC ="T13" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	#IO2
+	Net "start" LOC ="R11" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+	#IO3
+	Net "is_dm_access" LOC ="T8" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
